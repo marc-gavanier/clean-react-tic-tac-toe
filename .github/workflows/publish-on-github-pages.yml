@@ -11,6 +11,9 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
 
+    environment:
+      name: github-pages
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -31,10 +34,14 @@ jobs:
 
       - name: Build
         env:
-          PUBLIC_URL: ${{ vars.PUBLIC_URL }}
+          VARS_PUBLIC_URL: ${{ vars.PUBLIC_URL }}
+          HOPELESS_PUBLIC_URL: PUBLIC_URL
         run: |
-          echo Hello from env $PUBLIC_URL
+          echo Hello from global $VARS_PUBLIC_URL
+          echo Hello from secrets ${{ secrets.PUBLIC_URL }}
+          echo Hello from env ${{ env.PUBLIC_URL }}
           echo Hello from vars ${{ vars.PUBLIC_URL }}
+          echo Hello from hopeless $HOPELESS_PUBLIC_URL
           PUBLIC_URL=$PUBLIC_URL pnpm build
 
       - name: Upload build artifact
