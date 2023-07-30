@@ -40,6 +40,7 @@
     "lint.commit": "commitlint --from origin/main",
     "lint.staged": "lint-staged",
     "prettier": "prettier --write ./src/",
+    "prettier.ci": "prettier --check ./src/",
     "prepare": "husky install"
   },
   "browserslist": {
