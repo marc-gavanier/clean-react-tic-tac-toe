@@ -30,8 +30,11 @@ jobs:
         run: pnpm install
 
       - name: Build
+        env:
+          PUBLIC_URL: ${{ vars.PUBLIC_URL }}
         run: |
-          echo $PUBLIC_URL
+          echo Hello from env $PUBLIC_URL
+          echo Hello from vars ${{ vars.PUBLIC_URL }}
           PUBLIC_URL=$PUBLIC_URL pnpm build
 
       - name: Upload build artifact
