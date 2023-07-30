@@ -11,7 +11,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
-      PUBLIC_URL: ${{ env.PUBLIC_URL }}
+      PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
 
     steps:
       - name: Checkout repository
