@@ -122,6 +122,22 @@ Runs all static analysis on files staged with git.
 - [Husky](https://typicode.github.io/husky/#/): performs automatic checks before publishing contributions with git
 - [Commitlint](https://github.com/conventional-changelog/commitlint): ensures commit messages follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification
 - [Lint-staged](https://github.com/okonet/lint-staged): applies all linters against staged git files
+
+### Continuous Integration
+
+- [GitHub Actions](https://docs.github.com/en/actions): GitHub's built-in integration and continuous deployment tool
+  - Workflow runs are available [under Actions tab](https://github.com/marc-gavanier/clean-react-tic-tac-toe/actions)
+- Variables for `github-pages` environment:
+  - `PUBLIC_URL`: https://marc-gavanier.github.io/clean-react-tic-tac-toe, used by React at build time to define the URL for all static resources
+- Workflows:
+  - [Validate feature branch](./.github/workflows/validate-feature-branch.yml): Runs on every branch starting with a conventional prefix. It checks code quality before merging into the `main` branch
+  - [Publish on GitHub Pages](./.github/workflows/publish-on-github-pages.yml): Runs on every merge into the `main` branch. It builds and publishes a static website to GitHub Pages
+    - Uses `github-pages` environment, created automatically by setting up the `GitHub Action` source from the `Build and deployment` section in `Settings/Pages`
+
+### Continuous Deployment
+
+- [GitHub Pages](https://pages.github.com/): GitHub's static website hosting service
+
 - <h2 id="versioning">🏷️ Versioning</h2>
 
 This project follows [Semantic Versioning 2.0.0](https://semver.org/) specification for version naming, ensuring a clear release cycle and promoting backward compatibility.

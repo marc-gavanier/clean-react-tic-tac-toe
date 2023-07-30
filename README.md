@@ -18,6 +18,7 @@ Feel free to explore and provide feedback to make it even cleaner.
 - 🪧 [About](#about)
 - ✨ [Features](#features)
 - 🧭 [Usages](#usages)
+- 🎬 [Demo](#demo)
 - 🤗 [Contributing](#contributing)
 - 📝 [License](#license)
 
@@ -32,6 +33,12 @@ Feel free to explore and provide feedback to make it even cleaner.
 - **Time Travel with History**: As you play the game and make moves, the history list on the right side will keep track of each move made during the session. To revisit a previous state of the game, click on any move's button in the history list. The game board will update to display the board state at that specific move, allowing you to explore different paths and strategies.
 - **Sort Move History**: Use the toggle button located above the history list to switch between sorting the moves in ascending or descending order.
 - **Game End**: The game stops when one of the players completes a winning combination, or when all squares on the board are filled without a winner. The result displayed above the board indicates the player who achieved the winning combination first, or declares a draw if no winning combination is achieved.
+
+<h2 id="demo">🎬 Demo</h2>
+
+Check out the [live demo of the Clean React Tic-Tac-Toe](https://marc-gavanier.github.io/clean-react-tic-tac-toe/)
+
+Feel free to play the game and explore its features in action! 🚀
 
 <h2 id="contributing">🤗 Contributing</h2>
 
